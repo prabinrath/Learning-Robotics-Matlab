@@ -1,0 +1,12 @@
+O1 = [0 0];
+O2 = [l1*cos(theta(1)) l1*sin(theta(1))];
+O3 = manipulator_kinematics(l1,l2,theta);
+plot([O1(1) O2(1)], [O1(2) O2(2)], "LineWidth", 3, 'Color', 'red');
+plot([O2(1) O3(1)], [O2(2) O3(2)], "LineWidth", 3, 'Color', 'blue');
+plot(O1(1), O1(2), 's', 'MarkerSize', 10, "LineWidth", 1, 'Color', 'black');
+plot(O2(1), O2(2), '.', 'MarkerSize', 20, 'Color', 'black');
+plot(O3(1), O3(2), '.', 'MarkerSize', 20, 'Color', 'black');
+axis([-10 10 -10 10]);
+xticks(-10:2:10);
+yticks(-10:2:10);
+daspect([1 1 1]);
